@@ -5,6 +5,7 @@ services:
     build:
       context: ../
       dockerfile: docker/Dockerfile.prod
+    container_name: pokerogue
     ports:
       - "8000:8000"
     environment:

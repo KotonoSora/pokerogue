@@ -1,4 +1,5 @@
-version: "3.8"
+name: pagefault-pokerogue-prod
+
 services:
   pokerogue:
     build:
@@ -9,3 +10,17 @@ services:
     environment:
       - NODE_ENV=production
     restart: unless-stopped
+    volumes:
+      - pokerogue-storage:/app/dist
+    networks:
+      - internal
+      - pagefault-pokerogue-net
+
+volumes:
+  pokerogue-storage:
+
+networks:
+  internal:
+    internal: true
+  pagefault-pokerogue-net:
+    external: true

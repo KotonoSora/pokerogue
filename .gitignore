@@ -47,6 +47,4 @@ coverage
 # Script outputs
 *.csv
 
-assets/
-locales/
 species-output/*

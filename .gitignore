@@ -49,3 +49,4 @@ coverage
 
 assets/
 locales/
+species-output/*
